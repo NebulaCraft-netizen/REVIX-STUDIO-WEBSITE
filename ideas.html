@@ -1,123 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ideas — REVIX Studio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    .hero {
-      background: url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg') no-repeat center center/cover;
-      height: 50vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      text-shadow: 2px 2px 10px black;
-    }
-    .form-section {
-      padding: 60px 20px;
-      text-align: center;
-      background: #111;
-      color: white;
-    }
-    .form-section h2 {
-      margin-bottom: 20px;
-      font-size: 36px;
-    }
-    .form-section form {
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-      margin: auto;
-      gap: 15px;
-    }
-    .form-section input,
-    .form-section textarea {
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      width: 100%;
-    }
-    .form-section input[type="submit"] {
-      background: #f33;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .form-section input[type="submit"]:hover {
-      transform: scale(1.05);
-    }
-    .submitted-msg {
-      margin-top: 15px;
-      color: #0f0;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ideas — REVIX Studio</title>
+<style>
+body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#000; color:white; }
+header { background:#111; padding:15px 50px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #222; }
+.logo { font-size:26px; font-weight:bold; color:#f33; letter-spacing:1px; }
+nav.links { display:flex; gap:20px; }
+nav.links a { text-decoration:none; color:#ccc; font-weight:500; padding:8px 15px; border-radius:6px; transition:all 0.2s ease; }
+nav.links a:hover { background:#222; color:#f33; }
+nav.links a.active { background:#f33; color:white; }
+.hero { background:url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg') no-repeat center/cover; height:50vh; display:flex; justify-content:center; align-items:center; text-align:center; color:white; text-shadow:2px 2px 10px black; }
+.form-section { padding:60px 20px; text-align:center; background:#111; color:white; }
+.form-section h2 { margin-bottom:20px; font-size:36px; }
+.form-section form { display:flex; flex-direction:column; max-width:600px; margin:auto; gap:15px; }
+.form-section input, .form-section textarea { padding:12px; border-radius:8px; border:none; font-size:16px; width:100%; background:#222; color:white; }
+.form-section input::placeholder, .form-section textarea::placeholder { color:#aaa; }
+.form-section input[type="submit"] { background:#f33; color:white; font-weight:bold; cursor:pointer; transition:transform 0.2s ease; }
+.form-section input[type="submit"]:hover { transform:scale(1.05); }
+.submitted-msg { margin-top:15px; color:#0f0; font-weight:bold; }
+footer { background:#111; padding:20px; text-align:center; font-size:14px; color:#aaa; }
+@media (max-width:768px) { nav.links { flex-direction:column; gap:10px; } }
+</style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">REVIX STUDIO</div>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="games.html">Games</a>
-        <a class="active" href="ideas.html">Ideas</a>
-        <a href="join.html">Join</a>
-      </nav>
-      <a class="menu" href="join.html">Join</a>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <h1>Share Your Ideas!</h1>
-      <p>Tell us what we should add to our games. Your ideas could become part of REVIX Studio games!</p>
-    </div>
-  </section>
+<header>
+  <div class="logo">REVIX STUDIO</div>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="games.html">Games</a>
+    <a class="active" href="ideas.html">Ideas</a>
+    <a href="join.html">Join</a>
+  </nav>
+</header>
 
-  <section class="form-section">
-    <h2>Submit Your Game Idea</h2>
-    <form action="https://formspree.io/f/xgvzjapw" method="POST">
-      <input type="text" name="game_name" placeholder="Game Name" required>
-      <textarea name="idea" placeholder="Your idea / feature / suggestion" rows="6" required></textarea>
-      <input type="submit" value="Submit Idea">
-    </form>
-    <div class="submitted-msg" id="submittedMsg" style="display:none;">Thank you! Your idea has been submitted.</div>
-  </section>
+<section class="hero">
+  <h1>Share Your Ideas!</h1>
+  <p>Tell us what we should add to our games. Your ideas could become part of REVIX Studio games!</p>
+</section>
 
-  <footer>
-    <div class="container row" style="padding:20px;text-align:center;">
-      <div>© 2025 REVIX Studio</div>
-      <div style="display:flex;gap:16px;justify-content:center;">
-        <a href="join.html">Join</a>
-      </div>
-    </div>
-  </footer>
+<section class="form-section">
+  <h2>Submit Your Game Idea</h2>
+  <form action="https://formspree.io/f/xgvzjapw" method="POST">
+    <input type="text" name="game_name" placeholder="Game Name" required>
+    <textarea name="idea" placeholder="Your idea / feature / suggestion" rows="6" required></textarea>
+    <input type="submit" value="Submit Idea">
+  </form>
+  <div class="submitted-msg" id="submittedMsg" style="display:none;">Thank you! Your idea has been submitted.</div>
+</section>
 
-  <script>
-    // Show message after submission
-    const form = document.querySelector('form');
-    const msg = document.getElementById('submittedMsg');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          msg.style.display = 'block';
-          form.reset();
-        } else {
-          alert('Error submitting form, try again.');
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+<footer>
+  <p>© 2025 REVIX Studio. All Rights
