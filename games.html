@@ -16,45 +16,50 @@
         <a class="active" href="games.html">Games</a>
         <a href="join.html">Join</a>
       </nav>
+      <a class="menu" href="join.html">Join</a>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero big">
+    <div class="hero-media">
+      <img class="img-cover" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1920&q=80" alt="Industrial arena">
+    </div>
     <div class="container hero-inner">
-      <span class="tag">Our Game</span>
       <h1>Project: Future FPS</h1>
-      <p>A competitive Roblox shooter with crisp gunplay, smart maps, and grindable flex.</p>
+      <p>A competitive Roblox shooter with crisp gunfeel, smart maps, and grindable flex.</p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container grid" style="grid-template-columns:1fr 1fr">
-      <div class="card round reveal">
-        <img class="img-cover" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80" alt="Industrial arena"/>
-      </div>
-      <div class="reveal">
-        <h2>Core Loop</h2>
-        <p class="lead">Move with intent, take space, win your duels, play the objective.</p>
-        <ul class="meta" style="padding-left:18px">
-          <li>Click-feel tuned for clarity</li>
-          <li>Scopes & recoil you can read</li>
-          <li>Economy-free: loadouts by mode</li>
-          <li>Ranked + unranked queues</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
+  <!-- Big, cinematic image grid -->
   <section class="section">
     <div class="container">
-      <h2 class="reveal">Maps</h2>
+      <h2 class="reveal">Screens & Concepts</h2>
       <div class="grid gallery reveal">
-        <div class="span-6 round"><img class="img-cover" src="https://images.unsplash.com/photo-1500077423678-00f640aa4d39?auto=format&fit=crop&w=1600&q=80" alt="Neon alley"/></div>
-        <div class="span-6 round"><img class="img-cover" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80" alt="Desert facility"/></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1200&q=80" alt="Harbor"/></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=1200&q=80" alt="Metro"/></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Skyscraper"/></div>
+        <div class="span-6 round">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1500077423678-00f640aa4d39?auto=format&fit=crop&w=1600&q=80" alt="Neon alley">
+        </div>
+        <div class="span-6 round">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80" alt="Desert facility">
+        </div>
+        <div class="span-4 round">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=1200&q=80" alt="Metro tunnels">
+        </div>
+        <div class="span-4 round">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1200&q=80" alt="HUD concept">
+        </div>
+        <div class="span-4 round">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=1200&q=80" alt="Tech mood">
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Feature cards -->
+  <section class="section">
+    <div class="container grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card reveal"><div class="pad"><h3>Modes</h3><p class="lead" style="font-size:1rem">Team Elim, Capture, and a tactical objective mode.</p></div></div>
+      <div class="card reveal"><div class="pad"><h3>Progression</h3><p class="lead" style="font-size:1rem">Milestones unlock cosmetics — performance, not paywalls.</p></div></div>
+      <div class="card reveal"><div class="pad"><h3>Ranked</h3><p class="lead" style="font-size:1rem">Seasonal ranks, fair MMR, visible improvement paths.</p></div></div>
     </div>
   </section>
 
@@ -66,6 +71,7 @@
       </div>
     </div>
   </footer>
+
   <script>
     const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
