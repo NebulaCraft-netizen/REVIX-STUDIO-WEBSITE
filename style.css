@@ -1,114 +1,129 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: #eee;
+/* ====== REVIX Studio Theme (Wix-like, modern) ====== */
+:root{
+  --bg:#0a0a0f;
+  --bg-2:#0e0e15;
+  --card:#111322;
+  --text:#e8ecf1;
+  --muted:#b9c3cf;
+  --brand:#60a5fa;      /* sky blue */
+  --brand-2:#22d3ee;    /* cyan */
+  --accent:#a78bfa;     /* purple */
+  --danger:#f87171;     /* soft red */
+  --ok:#34d399;         /* green */
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: #111;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.15), transparent),
+             radial-gradient(800px 400px at 10% -10%, rgba(34,211,238,.12), transparent),
+             var(--bg);
+  color:var(--text);
+  line-height:1.65;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0ff;
+/* Utilities */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.grid{display:grid;gap:24px}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:12px 18px;border-radius:12px;text-decoration:none;
+  color:#0b1020;background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  font-weight:700; box-shadow:var(--shadow); transition:.25s transform,.25s filter;
+}
+.btn:hover{transform:translateY(-2px); filter:brightness(1.05)}
+.btn.outline{background:transparent;border:1.5px solid rgba(255,255,255,.18);color:var(--text)}
+.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.07);color:var(--muted);font-size:.85rem}
+
+/* Header / Nav */
+header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(180deg, rgba(10,10,15,.75), rgba(10,10,15,.35) 60%, transparent);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+}
+.logo{
+  font-weight:900;letter-spacing:.08em;
+  background: linear-gradient(90deg,var(--brand-2),var(--brand),var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-size:1.2rem;
+}
+.nav a{color:var(--muted);text-decoration:none;margin-left:22px}
+.nav a.active,.nav a:hover{color:var(--text)}
+/* Mobile */
+.menu{display:none}
+@media (max-width:800px){
+  .menu{display:block}
+  .links{display:none}
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;isolation:isolate;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.hero-media{
+  position:absolute;inset:0;z-index:-1;opacity:.45;
+  filter:saturate(1.2) contrast(1.05) brightness(.9);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background: radial-gradient(800px 400px at 80% 0%, rgba(167,139,250,.18), transparent);
+  pointer-events:none;
+}
+.hero-inner{padding:92px 0 80px}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);margin:0 0 10px;font-weight:900;letter-spacing:.02em}
+.hero p{max-width:720px;color:var(--muted);margin:0 0 22px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+
+/* Section */
+.section{padding:72px 0;border-top:1px solid rgba(255,255,255,.06)}
+.section h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin:0 0 12px}
+.lead{color:var(--muted);max-width:820px}
+
+/* Cards */
+.card{
+  background:linear-gradient(180deg,var(--card),#0b0d19);
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:var(--shadow); border-radius:16px; overflow:hidden;
+}
+.card .pad{padding:18px}
+.card h3{margin:0 0 6px}
+.meta{color:var(--muted);font-size:.92rem}
+
+/* Image styles */
+.img-cover{width:100%;height:100%;object-fit:cover;display:block}
+.round{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+
+/* Showcase slider (pure CSS) */
+.slider{position:relative}
+.slider-track{display:flex;scroll-snap-type:x mandatory;overflow-x:auto;gap:16px;scroll-behavior:smooth;padding-bottom:6px}
+.slider-track > a, .slider-track > div{scroll-snap-align:center;min-width:min(90vw,860px)}
+.slider::-webkit-scrollbar,.slider-track::-webkit-scrollbar{height:8px}
+.slider-track::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:999px}
+
+/* Gallery grid */
+.gallery{grid-template-columns:repeat(12,1fr)}
+.gallery .span-6{grid-column:span 6}
+.gallery .span-4{grid-column:span 4}
+@media (max-width:900px){
+  .gallery{grid-template-columns:repeat(6,1fr)}
+  .gallery .span-6{grid-column:span 6}
+  .gallery .span-4{grid-column:span 6}
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #eee;
-  transition: color 0.3s;
-}
+/* Footer */
+footer{padding:36px 0;background:linear-gradient(180deg,transparent,#0b0d19)}
+footer .row{display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--text)}
 
-nav ul li a.active,
-nav ul li a:hover {
-  color: #0ff;
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-  color: white;
-  padding: 100px 20px;
-}
-
-.hero.small {
-  background: #111;
-  padding: 60px 20px;
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
-  z-index: -1;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-
-.btn {
-  display: inline-block;
-  background: #0ff;
-  color: #111;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #08a;
-}
-
-.content {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-.content img {
-  width: 100%;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-.join-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.join-form input,
-.join-form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  margin-top: 40px;
-}
+/* Animations */
+.reveal{opacity:0;transform:translateY(20px);transition:.6s ease}
+.reveal.show{opacity:1;transform:none}
