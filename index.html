@@ -3,171 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join My Roblox Game Team</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: white;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      overflow-x: hidden;
-    }
-
-    /* Loading Screen */
-    #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0f0f0f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      flex-direction: column;
-    }
-    .spinner {
-      border: 6px solid #2a2a2a;
-      border-top: 6px solid #ff4747;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    header {
-      background: #ff4747;
-      padding: 20px;
-      animation: fadeIn 1.2s ease-in;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1em;
-    }
-
-    section {
-      padding: 40px 20px;
-      animation: fadeInUp 1.2s ease;
-    }
-
-    /* Form Styling */
-    form {
-      background: #1c1c1c;
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.2);
-    }
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 5px;
-    }
-    input, textarea {
-      background: #2a2a2a;
-      color: white;
-    }
-    button {
-      background: #ff4747;
-      color: white;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      background: #ff6b6b;
-    }
-
-    /* Latest Game Section */
-    .game-card {
-      background: #1c1c1c;
-      max-width: 700px;
-      margin: auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 12px rgba(255,255,255,0.2);
-      transition: transform 0.3s ease;
-    }
-    .game-card:hover {
-      transform: scale(1.02);
-    }
-    .game-card img {
-      width: 100%;
-      display: block;
-    }
-    .game-card .info {
-      padding: 20px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-  </style>
+  <title>REVIX Studio - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Loading Screen -->
-  <div id="loader">
-    <div class="spinner"></div>
-    <p>Loading...</p>
-  </div>
-
   <header>
-    <h1>🚀 Join My Roblox FPS Shooter Game Team 🚀</h1>
-    <p><strong>MAKING A COOL FPS SHOOTER GAME – JOIN NOW AND BE A FUTURE W GAME DEV!</strong></p>
+    <nav>
+      <h1 class="logo">REVIX Studio</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Our Latest Game Section -->
-  <section>
-    <h2>🎮 Our Latest Game</h2>
-    <div class="game-card">
-      <img src="https://via.placeholder.com/700x300.png?text=Your+Game+Image+Here" alt="Our Game">
-      <div class="info">
-        <h3>Roblox FPS Shooter</h3>
-        <p>Fast-paced action, custom weapons, and epic maps! We are building the next big FPS on Roblox. Join us in making it legendary.</p>
-      </div>
-    </div>
+  <section class="hero">
+    <h2>Welcome to REVIX Studio</h2>
+    <p>The future of Roblox FPS experiences starts here.</p>
   </section>
 
-  <!-- Application Form -->
-  <section>
-    <h2>Apply Now</h2>
-    <form action="https://formspree.io/f/myzpqyda" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="text" name="roblox" placeholder="Roblox Username" required>
-      <input type="text" name="discord" placeholder="Discord Tag (e.g. user#1234)" required>
-      <input type="text" name="skills" placeholder="Your Skills (Builder, Scripter, etc.)" required>
-      <textarea name="portfolio" rows="4" placeholder="Portfolio or Experience (optional)"></textarea>
-      <button type="submit">Submit Application</button>
-    </form>
+  <section class="content">
+    <h2>Our Mission</h2>
+    <p>
+      REVIX Studio was founded with one goal: to push the limits of Roblox gaming. We believe Roblox
+      is more than just a platform; it is a canvas where creativity meets code, where worlds are not
+      only imagined but lived in. Our mission is to deliver immersive, high-quality experiences that
+      rival mainstream gaming titles.
+    </p>
+    <p>
+      In 2025, Roblox is no longer a place for small projects—it has become a serious platform for
+      professional development. At REVIX Studio, we’re blending professional development pipelines,
+      creative storytelling, and competitive mechanics to craft an FPS that feels alive, polished,
+      and endlessly replayable.
+    </p>
+    <h2>Why We Exist</h2>
+    <p>
+      Many Roblox games are fun but shallow. We asked ourselves: what if a Roblox FPS could capture
+      the intensity of Call of Duty, the teamwork of Valorant, and the accessibility of Roblox? That
+     ’s the dream we’re chasing. With powerful maps, realistic gunplay, dynamic animations, and a
+      focus on competitive play, REVIX Studio is here to prove that Roblox can deliver AAA vibes.
+    </p>
+    <p>
+      Our landing page is more than a welcome mat—it’s the start of a revolution. We’re not just
+      making a game. We’re building a community, an ecosystem, and an opportunity for gamers and
+      developers alike.
+    </p>
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="about.html">Learn About Our Studio</a></li>
+      <li><a href="games.html">Explore Our Game</a></li>
+      <li><a href="join.html">Join the Team</a></li>
+    </ul>
+    <p>
+      This is just the beginning. Scroll through our site, learn about our vision, and if you’re a
+      developer, artist, or designer, <a href="join.html">join us today</a>. Together we’ll prove
+      what’s possible on Roblox.
+    </p>
   </section>
 
-  <script>
-    // Loader hide after page loads
-    window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
-
+  <footer>
+    <p>© 2025 REVIX Studio. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
