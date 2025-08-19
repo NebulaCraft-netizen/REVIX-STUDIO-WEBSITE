@@ -16,12 +16,15 @@
         <a href="games.html">Games</a>
         <a href="join.html">Join</a>
       </nav>
+      <a class="menu" href="join.html">Join</a>
     </div>
   </header>
 
   <section class="hero">
+    <div class="hero-media">
+      <img class="img-cover" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80" alt="City night">
+    </div>
     <div class="container hero-inner">
-      <span class="tag">Studio</span>
       <h1>We’re a Roblox-first FPS studio</h1>
       <p>Practical pipelines, high standards, and a love for competitive design.</p>
     </div>
@@ -31,22 +34,19 @@
     <div class="container grid" style="grid-template-columns:1.2fr .8fr;align-items:start">
       <div class="reveal">
         <h2>Our Mission</h2>
-        <p class="lead">
-          To craft FPS experiences that feel tight, fair, and endlessly replayable—while empowering
-          new developers to learn real studio workflows.
-        </p>
-        <div class="card round" style="margin-top:14px">
-          <img class="img-cover" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80" alt="Night city"/>
+        <p class="lead">To craft FPS experiences that feel tight, fair, and endlessly replayable — while empowering new developers to learn real studio workflows.</p>
+        <div class="card round" style="margin-top:16px">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1600&q=80" alt="Gear detail">
         </div>
       </div>
       <div class="card reveal">
         <div class="pad">
           <h3>Core Values</h3>
-          <ul class="meta" style="margin:0;padding-left:18px">
+          <ul class="lead" style="margin:0;padding-left:18px;font-size:1rem">
             <li>Play-first design</li>
-            <li>Readable combat</li>
-            <li>No pay-to-win</li>
-            <li>Iterate with community</li>
+            <li>Readable, responsive combat</li>
+            <li>No pay-to-win progression</li>
+            <li>Iterate with the community</li>
             <li>Teach as we build</li>
           </ul>
         </div>
@@ -58,9 +58,9 @@
     <div class="container">
       <h2 class="reveal">How we build</h2>
       <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-        <div class="card reveal"><div class="pad"><h3>Design</h3><p class="meta">Blockouts → test routes → iterate on sightlines.</p></div></div>
-        <div class="card reveal"><div class="pad"><h3>Code</h3><p class="meta">Modular systems, predictable latency, server-first rules.</p></div></div>
-        <div class="card reveal"><div class="pad"><h3>Polish</h3><p class="meta">Audio, VFX, camera shake—sparingly, but purposefully.</p></div></div>
+        <div class="card reveal"><div class="pad"><h3>Design</h3><p class="lead" style="font-size:1rem">Blockouts → test routes → refine sightlines & timings.</p></div></div>
+        <div class="card reveal"><div class="pad"><h3>Code</h3><p class="lead" style="font-size:1rem">Modular systems, predictable latency, server-first rules.</p></div></div>
+        <div class="card reveal"><div class="pad"><h3>Polish</h3><p class="lead" style="font-size:1rem">Audio, VFX, camera, and UI that amplify clarity.</p></div></div>
       </div>
     </div>
   </section>
@@ -74,5 +74,10 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
