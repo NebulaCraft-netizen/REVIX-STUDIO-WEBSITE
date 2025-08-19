@@ -1,127 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Games — REVIX Studio</title>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games — REVIX Studio</title>
+<style>
+body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#000; color:white; }
+header { background:#111; padding:15px 50px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #222; }
+.logo { font-size:26px; font-weight:bold; color:#f33; letter-spacing:1px; }
+nav.links { display:flex; gap:20px; }
+nav.links a { text-decoration:none; color:#ccc; font-weight:500; padding:8px 15px; border-radius:6px; transition:all 0.2s ease; }
+nav.links a:hover { background:#222; color:#f33; }
+nav.links a.active { background:#f33; color:white; }
+.hero { background:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; height:50vh; display:flex; justify-content:center; align-items:center; text-align:center; color:white; text-shadow:2px 2px 10px black; }
+.section { padding:80px 50px; text-align:center; }
+.section h2 { font-size:36px; margin-bottom:20px; }
+.grid { display:grid; gap:20px; }
+.grid.gallery { grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+.grid.gallery img { width:100%; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.6); transition:transform 0.3s ease; }
+.grid.gallery img:hover { transform:scale(1.05); }
+.card { background:#111; border-radius:12px; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.6); }
+footer { background:#111; padding:20px; text-align:center; font-size:14px; color:#aaa; }
+</style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">REVIX STUDIO</div>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="games.html">Games</a>
-        <a href="join.html">Join</a>
-      </nav>
-      <a class="menu" href="join.html">Join</a>
-    </div>
-  </header>
 
-  <!-- Hero Section for Arena X -->
-  <section class="hero big">
-    <div class="hero-media">
-      <a href="https://www.roblox.com/games/114842101034683/Arena-X" target="_blank">
-        <img class="img-cover" src="https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg" alt="Arena X">
-      </a>
-    </div>
-    <div class="container hero-inner">
-      <h1>Arena X</h1>
-      <p>An intense FPS Roblox experience — compete, climb the leaderboard, and master tactical maps.</p>
-    </div>
-  </section>
+<header>
+  <div class="logo">REVIX STUDIO</div>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="active" href="games.html">Games</a>
+    <a href="ideas.html">Ideas</a>
+    <a href="join.html">Join</a>
+  </nav>
+</header>
 
-  <!-- Gallery Section for Arena X -->
-  <section class="section">
-    <div class="container">
-      <h2 class="reveal">Screens & Concepts</h2>
-      <div class="grid gallery reveal">
-        <div class="span-6 round"><img class="img-cover" src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" alt="Arena X action"></div>
-        <div class="span-6 round"><img class="img-cover" src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg" alt="Arena X map"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/12718988/pexels-photo-12718988.jpeg" alt="Arena X players"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/9072307/pexels-photo-9072307.jpeg" alt="Arena X hud"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg" alt="Arena X battle"></div>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+  <h2>Our Games</h2>
+</section>
 
-  <!-- Hero Section for Cart Ride -->
-  <section class="hero big">
-    <div class="hero-media">
-      <a href="https://www.roblox.com/games/85136359117468/NEW-CART-RIDE-AROUND-NOTHING-2-0" target="_blank">
-        <img class="img-cover" src="https://images.pexels.com/photos/1382785/pexels-photo-1382785.jpeg" alt="Cart Ride">
-      </a>
-    </div>
-    <div class="container hero-inner">
-      <h1>Cart Ride</h1>
-      <p>High-speed Roblox fun! Race through challenging tracks, unlock rewards, and enjoy multiplayer chaos.</p>
-    </div>
-  </section>
+<section class="section">
+  <h2>Featured Games</h2>
+  <div class="grid gallery">
+    <a href="https://www.roblox.com/games/114842101034683/Arena-X" target="_blank">
+      <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" alt="Arena X">
+    </a>
+    <a href="https://www.roblox.com/games/120365930948473/NEW-Media-Tower" target="_blank">
+      <img src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg" alt="Media Tower">
+    </a>
+    <a href="https://www.roblox.com/games/85136359117468/NEW-CART-RIDE-AROUND-NOTHING-2-0" target="_blank">
+      <img src="https://images.pexels.com/photos/12718988/pexels-photo-12718988.jpeg" alt="Cart Ride">
+    </a>
+  </div>
+</section>
 
-  <!-- Gallery Section for Cart Ride -->
-  <section class="section">
-    <div class="container">
-      <h2 class="reveal">Screens & Concepts</h2>
-      <div class="grid gallery reveal">
-        <div class="span-6 round"><img class="img-cover" src="https://images.pexels.com/photos/1703313/pexels-photo-1703313.jpeg" alt="Cart Ride track"></div>
-        <div class="span-6 round"><img class="img-cover" src="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg" alt="Cart Ride multiplayer"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/256208/pexels-photo-256208.jpeg" alt="Cart Ride boost"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/163077/pexels-photo-163077.jpeg" alt="Cart Ride fun"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/417293/pexels-photo-417293.jpeg" alt="Cart Ride obstacles"></div>
-      </div>
-    </div>
-  </section>
+<section class="section">
+  <h2>Game Features</h2>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:20px;">
+    <div class="card"><h3>Competitive Modes</h3><p>Team deathmatch, capture points, and tactical objectives.</p></div>
+    <div class="card"><h3>Progression</h3><p>Unlock cosmetics, ranks, and rewards through gameplay.</p></div>
+    <div class="card"><h3>Multiplayer Fun</h3><p>Play with friends and compete globally.</p></div>
+  </div>
+</section>
 
-  <!-- Hero Section for Media Tower -->
-  <section class="hero big">
-    <div class="hero-media">
-      <a href="https://www.roblox.com/games/120365930948473/NEW-Media-Tower" target="_blank">
-        <img class="img-cover" src="https://images.pexels.com/photos/1738992/pexels-photo-1738992.jpeg" alt="Media Tower">
-      </a>
-    </div>
-    <div class="container hero-inner">
-      <h1>Media Tower</h1>
-      <p>Climb, strategize, and conquer creative challenges in this vertical Roblox adventure.</p>
-    </div>
-  </section>
+<footer>
+  <p>© 2025 REVIX Studio. All Rights Reserved.</p>
+</footer>
 
-  <!-- Gallery Section for Media Tower -->
-  <section class="section">
-    <div class="container">
-      <h2 class="reveal">Screens & Concepts</h2>
-      <div class="grid gallery reveal">
-        <div class="span-6 round"><img class="img-cover" src="https://images.pexels.com/photos/236347/pexels-photo-236347.jpeg" alt="Media Tower level"></div>
-        <div class="span-6 round"><img class="img-cover" src="https://images.pexels.com/photos/170981/pexels-photo-170981.jpeg" alt="Media Tower obstacle"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/1051079/pexels-photo-1051079.jpeg" alt="Media Tower team"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/256106/pexels-photo-256106.jpeg" alt="Media Tower rewards"></div>
-        <div class="span-4 round"><img class="img-cover" src="https://images.pexels.com/photos/216671/pexels-photo-216671.jpeg" alt="Media Tower fun"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature cards -->
-  <section class="section">
-    <div class="container grid" style="grid-template-columns:repeat(3,1fr)">
-      <div class="card reveal"><div class="pad"><h3>Modes</h3><p class="lead" style="font-size:1rem">Team Elim, Capture, and tactical objectives.</p></div></div>
-      <div class="card reveal"><div class="pad"><h3>Progression</h3><p class="lead" style="font-size:1rem">Milestones unlock cosmetics — performance, not paywalls.</p></div></div>
-      <div class="card reveal"><div class="pad"><h3>Ranked</h3><p class="lead" style="font-size:1rem">Seasonal ranks, fair MMR, visible improvement paths.</p></div></div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container row">
-      <div>© 2025 REVIX Studio</div>
-      <div style="display:flex;gap:16px">
-        <a href="join.html">Join</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  </script>
 </body>
 </html>
