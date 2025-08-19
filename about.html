@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us – REVIX Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — REVIX Studio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <div class="logo">REVIX STUDIO</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="join.html">Join Us</a></li>
-      </ul>
-    </nav>
+    <div class="container nav">
+      <div class="logo">REVIX STUDIO</div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="games.html">Games</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero small">
-    <h1>About REVIX Studio</h1>
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="tag">Studio</span>
+      <h1>We’re a Roblox-first FPS studio</h1>
+      <p>Practical pipelines, high standards, and a love for competitive design.</p>
+    </div>
   </section>
 
-  <section class="content">
-    <h2>Our Story</h2>
-    <p>
-      REVIX Studio started as a small group of passionate Roblox players who wanted something more from FPS games.
-      Tired of clunky mechanics, pay-to-win models, and uninspired design, we decided to take matters into our own hands.
-    </p>
-    <p>
-      What began as late-night brainstorming sessions has evolved into a fully committed development team. With scripters,
-      modelers, animators, and designers working hand in hand, we are creating games that push Roblox to its limits.
-    </p>
+  <section class="section">
+    <div class="container grid" style="grid-template-columns:1.2fr .8fr;align-items:start">
+      <div class="reveal">
+        <h2>Our Mission</h2>
+        <p class="lead">
+          To craft FPS experiences that feel tight, fair, and endlessly replayable—while empowering
+          new developers to learn real studio workflows.
+        </p>
+        <div class="card round" style="margin-top:14px">
+          <img class="img-cover" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80" alt="Night city"/>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="pad">
+          <h3>Core Values</h3>
+          <ul class="meta" style="margin:0;padding-left:18px">
+            <li>Play-first design</li>
+            <li>Readable combat</li>
+            <li>No pay-to-win</li>
+            <li>Iterate with community</li>
+            <li>Teach as we build</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2>Our Vision</h2>
-    <p>
-      We want to be known as the studio that revolutionized Roblox FPS. Not just for creating games, but for building
-      communities. REVIX Studio is where competitive spirit meets creativity, where every player has a role in shaping
-      the future of our games.
-    </p>
-
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>🚀 Innovative combat mechanics</li>
-      <li>🎨 Stunning maps & design</li>
-      <li>⚔️ Balanced competitive systems</li>
-      <li>🤝 Community-driven updates</li>
-      <li>🌍 Global reach with passionate devs</li>
-    </ul>
+  <section class="section">
+    <div class="container">
+      <h2 class="reveal">How we build</h2>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="card reveal"><div class="pad"><h3>Design</h3><p class="meta">Blockouts → test routes → iterate on sightlines.</p></div></div>
+        <div class="card reveal"><div class="pad"><h3>Code</h3><p class="meta">Modular systems, predictable latency, server-first rules.</p></div></div>
+        <div class="card reveal"><div class="pad"><h3>Polish</h3><p class="meta">Audio, VFX, camera shake—sparingly, but purposefully.</p></div></div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 REVIX Studio</p>
+    <div class="container row">
+      <div>© 2025 REVIX Studio</div>
+      <div style="display:flex;gap:16px">
+        <a href="games.html">Games</a>
+        <a href="join.html">Join</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
