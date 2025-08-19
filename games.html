@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Games – REVIX Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Games — REVIX Studio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <div class="logo">REVIX STUDIO</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="games.html" class="active">Games</a></li>
-        <li><a href="join.html">Join Us</a></li>
-      </ul>
-    </nav>
+    <div class="container nav">
+      <div class="logo">REVIX STUDIO</div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="games.html">Games</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero small">
-    <h1>Our Games</h1>
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="tag">Our Game</span>
+      <h1>Project: Future FPS</h1>
+      <p>A competitive Roblox shooter with crisp gunplay, smart maps, and grindable flex.</p>
+    </div>
   </section>
 
-  <section class="content">
-    <h2>Project: Future FPS</h2>
-    <img src="https://images.unsplash.com/photo-1611244419377-f7c7ff0cfcb5" alt="FPS Game" class="preview-img">
-    <p>
-      Our flagship project is a competitive Roblox FPS that blends the speed of arena shooters with the tactical depth
-      of strategy games. Designed for both casual and hardcore players, this game includes:
-    </p>
-    <ul>
-      <li>⚡ Smooth & responsive shooting mechanics</li>
-      <li>🗺️ Beautifully crafted maps</li>
-      <li>👑 Ranked modes and leaderboards</li>
-      <li>🎭 Custom cosmetics & unlocks</li>
-      <li>🎶 Immersive sound and effects</li>
-    </ul>
-    <p>
-      Stay tuned for devlogs and sneak peeks as we bring this vision to life!
-    </p>
+  <section class="section">
+    <div class="container grid" style="grid-template-columns:1fr 1fr">
+      <div class="card round reveal">
+        <img class="img-cover" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80" alt="Industrial arena"/>
+      </div>
+      <div class="reveal">
+        <h2>Core Loop</h2>
+        <p class="lead">Move with intent, take space, win your duels, play the objective.</p>
+        <ul class="meta" style="padding-left:18px">
+          <li>Click-feel tuned for clarity</li>
+          <li>Scopes & recoil you can read</li>
+          <li>Economy-free: loadouts by mode</li>
+          <li>Ranked + unranked queues</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="reveal">Maps</h2>
+      <div class="grid gallery reveal">
+        <div class="span-6 round"><img class="img-cover" src="https://images.unsplash.com/photo-1500077423678-00f640aa4d39?auto=format&fit=crop&w=1600&q=80" alt="Neon alley"/></div>
+        <div class="span-6 round"><img class="img-cover" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80" alt="Desert facility"/></div>
+        <div class="span-4 round"><img class="img-cover" src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1200&q=80" alt="Harbor"/></div>
+        <div class="span-4 round"><img class="img-cover" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=1200&q=80" alt="Metro"/></div>
+        <div class="span-4 round"><img class="img-cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Skyscraper"/></div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 REVIX Studio</p>
+    <div class="container row">
+      <div>© 2025 REVIX Studio</div>
+      <div style="display:flex;gap:16px">
+        <a href="join.html">Join</a>
+      </div>
+    </div>
   </footer>
+  <script>
+    const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
