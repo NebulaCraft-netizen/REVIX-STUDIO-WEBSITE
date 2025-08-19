@@ -1,19 +1,25 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
+  background: #0a0a0a;
+  color: #eee;
 }
 
 header {
-  background: #111;
-  padding: 15px;
-}
-
-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0ff;
 }
 
 nav ul {
@@ -22,48 +28,87 @@ nav ul {
   gap: 20px;
 }
 
-nav a {
-  color: #0ff;
+nav ul li a {
   text-decoration: none;
-  font-weight: bold;
+  color: #eee;
+  transition: color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #0ff;
 }
 
 .hero {
+  position: relative;
   text-align: center;
+  color: white;
   padding: 100px 20px;
-  background: linear-gradient(135deg, #0ff, #08f);
-  color: #000;
+}
+
+.hero.small {
+  background: #111;
+  padding: 60px 20px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  background: #0ff;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #08a;
 }
 
 .content {
-  padding: 40px;
-  line-height: 1.8;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-form {
+.content img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.join-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px;
 }
 
-input, textarea {
+.join-form input,
+.join-form textarea {
   padding: 10px;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
-button {
-  padding: 10px;
-  border: none;
-  background: #0ff;
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #08f;
-  color: #fff;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
 }
