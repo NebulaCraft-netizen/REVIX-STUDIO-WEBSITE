@@ -1,54 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Us – REVIX Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join — REVIX Studio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <div class="logo">REVIX STUDIO</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="join.html" class="active">Join Us</a></li>
-      </ul>
-    </nav>
+    <div class="container nav">
+      <div class="logo">REVIX STUDIO</div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="games.html">Games</a>
+        <a class="active" href="join.html">Join</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero small">
-    <h1>Join Our Team</h1>
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="tag">Recruiting</span>
+      <h1>Build with us</h1>
+      <p>Builders, scripters, UI/UX, animators, VFX, testers. If you love FPS, we want you.</p>
+    </div>
   </section>
 
-  <section class="content">
-    <h2>We’re Hiring!</h2>
-    <p>
-      REVIX Studio is looking for talented developers, builders, scripters, UI designers, and artists who want to
-      contribute to our FPS projects. If you love Roblox and want to be part of something big, apply now!
-    </p>
+  <section class="section">
+    <div class="container grid" style="grid-template-columns:1fr 1fr;align-items:start">
+      <div class="reveal">
+        <h2>Open Roles</h2>
+        <div class="grid" style="grid-template-columns:1fr 1fr">
+          <div class="card"><div class="pad"><h3>🔧 Scripter</h3><p class="meta">Roblox Lua, clean APIs, replication awareness.</p></div></div>
+          <div class="card"><div class="pad"><h3>🏗️ Builder</h3><p class="meta">Readable cover, performant detail, FPS flow.</p></div></div>
+          <div class="card"><div class="pad"><h3>🧩 UI/UX</h3><p class="meta">HUD clarity, menu flow, responsive layout.</p></div></div>
+          <div class="card"><div class="pad"><h3>🎬 Animator</h3><p class="meta">Weapon & character sets with weight and snap.</p></div></div>
+          <div class="card"><div class="pad"><h3>✨ VFX</h3><p class="meta">Readable muzzle flash, hitsparks, subtle trails.</p></div></div>
+          <div class="card"><div class="pad"><h3>🧪 Tester</h3><p class="meta">Break it. Report it. Make it better.</p></div></div>
+        </div>
+      </div>
 
-    <form action="https://formspree.io/f/myzpqyda" method="POST" class="join-form">
-      <label>Your Name</label>
-      <input type="text" name="name" required>
-
-      <label>Email</label>
-      <input type="email" name="email" required>
-
-      <label>Role you’re applying for</label>
-      <input type="text" name="role" required>
-
-      <label>Why should we hire you?</label>
-      <textarea name="message" required></textarea>
-
-      <button type="submit" class="btn">Submit Application</button>
-    </form>
+      <div class="card reveal">
+        <div class="pad">
+          <h2>Apply Now</h2>
+          <form id="apply" action="https://formspree.io/f/myzpqyda" method="POST">
+            <input type="hidden" name="_subject" value="New REVIX Application"/>
+            <div style="display:grid;gap:10px">
+              <label class="meta">Name
+                <input name="name" required placeholder="Your name"/>
+              </label>
+              <label class="meta">Email
+                <input type="email" name="email" required placeholder="email@example.com"/>
+              </label>
+              <label class="meta">Discord
+                <input name="discord" required placeholder="user#1234"/>
+              </label>
+              <label class="meta">Role
+                <input name="role" required placeholder="Scripter / Builder / UI / Animator / VFX / Tester"/>
+              </label>
+              <label class="meta">Portfolio / Links
+                <input name="links" placeholder="Drive, GitHub, Roblox profile, etc."/>
+              </label>
+              <label class="meta">Why do you want to join?
+                <textarea name="message" rows="5" required placeholder="Tell us briefly about your experience and what you want to build."></textarea>
+              </label>
+              <button class="btn" type="submit">Send Application</button>
+              <p id="status" class="meta" style="margin:6px 0 0"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 REVIX Studio</p>
+    <div class="container row">
+      <div>© 2025 REVIX Studio</div>
+      <div style="display:flex;gap:16px">
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Smooth reveal
+    const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Optional: AJAX submit to show a success message without leaving the page
+    const form = document.getElementById('apply');
+    const status = document.getElementById('status');
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      status.textContent = "Sending…";
+      try{
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' }});
+        if(res.ok){
+          status.textContent = "✅ Application sent! Check your email for confirmation.";
+          form.reset();
+        }else{
+          status.textContent = "⚠️ Could not send. You can try again in a moment.";
+        }
+      }catch(err){
+        status.textContent = "⚠️ Network error. Please try again.";
+      }
+    });
+  </script>
 </body>
 </html>
