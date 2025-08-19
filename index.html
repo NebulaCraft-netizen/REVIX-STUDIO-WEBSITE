@@ -1,111 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>REVIX Studio — Roblox FPS</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REVIX Studio - FPS Game Developers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+      color: white;
+    }
+    header {
+      background-color: #111;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: #f33;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav a:hover {
+      color: #f33;
+    }
+    .hero {
+      background: url('https://images.pexels.com/photos/9072307/pexels-photo-9072307.jpeg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 50px;
+      text-shadow: 2px 2px 10px black;
+    }
+    .section {
+      padding: 80px 50px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="container nav">
-      <div class="logo">REVIX STUDIO</div>
-      <nav class="links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="games.html">Games</a>
-        <a href="join.html">Join</a>
-      </nav>
-      <a class="menu" href="join.html" aria-label="Join">Join</a>
-    </div>
+    <h1>REVIX STUDIO</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="games.html">Games</a>
+      <a href="join.html">Join Us</a>
+    </nav>
   </header>
 
-  <!-- HERO (reliable FPS-style background image) -->
   <section class="hero">
-    <div class="hero-media">
-      <img class="img-cover" src="https://images.unsplash.com/photo-1611244419377-f7c7ff0cfcb5?auto=format&fit=crop&w=1920&q=80" alt="FPS backdrop">
-    </div>
-    <div class="container hero-inner">
-      <h1>REVIX Studio</h1>
-      <p>
-        We build bold, competitive FPS experiences on Roblox — with responsive gunplay, tactical map flow,
-        and fair progression. Studio quality, Roblox-first creativity.
-      </p>
-      <div class="hero-actions">
-        <a href="games.html" class="btn">See Our Game</a>
-        <a href="join.html" class="btn outline">Join the Team</a>
-      </div>
-    </div>
+    <h2>Building The Coolest FPS Shooter Experience</h2>
   </section>
 
-  <!-- Highlight features -->
   <section class="section">
-    <div class="container">
-      <h2 class="reveal">What defines a REVIX FPS</h2>
-      <p class="lead reveal">Classic shooter energy, modern polish. No pay-to-win — just skill, teamwork, and style.</p>
-      <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:22px;gap:22px">
-        <div class="card reveal"><div class="pad"><h3>⚡ Crisp Gunfeel</h3><p class="lead" style="font-size:1rem">Readable recoil, snappy feedback, satisfying confirms.</p></div></div>
-        <div class="card reveal"><div class="pad"><h3>🗺️ Competitive Maps</h3><p class="lead" style="font-size:1rem">Angles, flanks, timing — maps built for mind games.</p></div></div>
-        <div class="card reveal"><div class="pad"><h3>🎭 Earned Cosmetics</h3><p class="lead" style="font-size:1rem">Grind milestones, flex your journey — never pay-to-win.</p></div></div>
-      </div>
-    </div>
+    <h2>About REVIX Studio</h2>
+    <p>
+      We are passionate Roblox game developers creating the next big **FPS shooter**.  
+      Our mission is to craft competitive, action-packed experiences with unique mechanics and stylish visuals.  
+      REVIX Studio is more than a team – it’s a movement of gamers and creators pushing the limits of Roblox.  
+    </p>
   </section>
 
-  <!-- Image gallery (index spotlight) -->
   <section class="section">
-    <div class="container">
-      <h2 class="reveal">World & Mood</h2>
-      <div class="grid gallery reveal">
-        <div class="span-6 round">
-          <img class="img-cover" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80" alt="Industrial arena">
-        </div>
-        <div class="span-6 round">
-          <img class="img-cover" src="https://images.unsplash.com/photo-1500077423678-00f640aa4d39?auto=format&fit=crop&w=1600&q=80" alt="Neon alley">
-        </div>
-        <div class="span-4 round">
-          <img class="img-cover" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80" alt="Desert facility">
-        </div>
-        <div class="span-4 round">
-          <img class="img-cover" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=1200&q=80" alt="Metro tunnels">
-        </div>
-        <div class="span-4 round">
-          <img class="img-cover" src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1200&q=80" alt="UI / HUD concept">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="card reveal">
-        <div class="pad">
-          <h2 style="margin:10px 0 8px">Make the FPS you want to play</h2>
-          <p class="lead">Builders, scripters, UI/UX, animators, VFX, testers — bring your craft, we bring the vision.</p>
-          <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn" href="join.html">Apply to REVIX</a>
-            <a class="btn outline" href="games.html">Explore our game</a>
-          </div>
-        </div>
-      </div>
+    <h2>Our Latest Game</h2>
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg" alt="Gaming RAM">
+      <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" alt="Gaming Equipment">
+      <img src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg" alt="Console">
+      <img src="https://images.pexels.com/photos/9072307/pexels-photo-9072307.jpeg" alt="PC Gaming">
+      <img src="https://images.pexels.com/photos/12718988/pexels-photo-12718988.jpeg" alt="Controllers">
     </div>
   </section>
 
   <footer>
-    <div class="container row">
-      <div>© 2025 REVIX Studio</div>
-      <div style="display:flex;gap:16px">
-        <a href="about.html">About</a>
-        <a href="games.html">Games</a>
-        <a href="join.html">Join</a>
-      </div>
-    </div>
+    <p>© 2025 REVIX Studio. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    // Reveal on scroll
-    const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  </script>
 </body>
 </html>
