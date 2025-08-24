@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join — REVIX Studio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us — REVIX Studio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -14,101 +14,24 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="games.html">Games</a>
+        <a href="ideas.html">Ideas</a>
         <a class="active" href="join.html">Join</a>
       </nav>
-      <a class="menu" href="join.html">Join</a>
     </div>
   </header>
 
-  <section class="hero big">
-    <div class="hero-media">
-      <img class="img-cover" src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d7?auto=format&fit=crop&w=1920&q=80" alt="FPS team">
-    </div>
+  <section class="hero">
     <div class="container hero-inner">
       <h1>Join REVIX Studio</h1>
-      <p>Builders, scripters, UI/UX, animators, VFX, testers — help us shape the next great Roblox FPS.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container grid" style="grid-template-columns:1fr 1fr;align-items:start">
-      <div class="reveal">
-        <h2>Open Roles</h2>
-        <div class="grid" style="grid-template-columns:1fr 1fr">
-          <div class="card"><div class="pad"><h3>🔧 Scripter</h3><p class="lead" style="font-size:1rem">Roblox Lua, clean APIs, replication awareness.</p></div></div>
-          <div class="card"><div class="pad"><h3>🏗️ Builder</h3><p class="lead" style="font-size:1rem">Readable cover, performant detail, FPS flow.</p></div></div>
-          <div class="card"><div class="pad"><h3>🧩 UI/UX</h3><p class="lead" style="font-size:1rem">HUD clarity, menu flow, responsive layout.</p></div></div>
-          <div class="card"><div class="pad"><h3>🎬 Animator</h3><p class="lead" style="font-size:1rem">Weapon & character sets with weight and snap.</p></div></div>
-          <div class="card"><div class="pad"><h3>✨ VFX</h3><p class="lead" style="font-size:1rem">Readable muzzle flash, hitsparks, subtle trails.</p></div></div>
-          <div class="card"><div class="pad"><h3>🧪 Tester</h3><p class="lead" style="font-size:1rem">Break it. Report it. Make it better.</p></div></div>
-        </div>
-      </div>
-
-      <div class="card reveal">
-        <div class="pad">
-          <h2>Apply Now</h2>
-          <form id="apply" action="https://formspree.io/f/myzpqyda" method="POST">
-            <input type="hidden" name="_subject" value="New REVIX Application"/>
-            <label class="lead" style="font-size:1rem">Name
-              <input name="name" required placeholder="Your name"/>
-            </label>
-            <label class="lead" style="font-size:1rem">Email
-              <input type="email" name="email" required placeholder="email@example.com"/>
-            </label>
-            <label class="lead" style="font-size:1rem">Discord
-              <input name="discord" required placeholder="user#1234"/>
-            </label>
-            <label class="lead" style="font-size:1rem">Role
-              <input name="role" required placeholder="Scripter / Builder / UI / Animator / VFX / Tester"/>
-            </label>
-            <label class="lead" style="font-size:1rem">Portfolio / Links
-              <input name="links" placeholder="Drive, GitHub, Roblox profile, etc."/>
-            </label>
-            <label class="lead" style="font-size:1rem">Why do you want to join?
-              <textarea name="message" rows="6" required placeholder="Tell us briefly about your experience and what you want to build."></textarea>
-            </label>
-            <button class="btn" type="submit">Send Application</button>
-            <p id="status" class="lead" style="font-size:.95rem;margin:6px 0 0"></p>
-          </form>
-        </div>
-      </div>
+      <p>We’re always looking for creative developers, scripters, modelers, and designers to join our team.</p>
+      <a class="btn" href="https://discord.gg/u9SuHXsr">Apply on Discord</a>
     </div>
   </section>
 
   <footer>
     <div class="container row">
       <div>© 2025 REVIX Studio</div>
-      <div style="display:flex;gap:16px">
-        <a href="games.html">Games</a>
-        <a href="about.html">About</a>
-      </div>
     </div>
   </footer>
-
-  <script>
-    // Reveal on scroll
-    const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // AJAX submit for nicer UX
-    const form = document.getElementById('apply');
-    const status = document.getElementById('status');
-    form.addEventListener('submit', async (e)=>{
-      e.preventDefault();
-      status.textContent = "Sending…";
-      try{
-        const data = new FormData(form);
-        const res = await fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' }});
-        if(res.ok){
-          status.textContent = "✅ Application sent! Check your email for confirmation.";
-          form.reset();
-        }else{
-          status.textContent = "⚠️ Could not send. Try again shortly.";
-        }
-      }catch(err){
-        status.textContent = "⚠️ Network error. Please try again.";
-      }
-    });
-  </script>
 </body>
 </html>
