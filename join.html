@@ -14,43 +14,55 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="games.html">Games</a></li>
-      <li><a href="ideas.html">Ideas</a></li>
       <li><a href="join.html" class="active">Join</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Header -->
-  <header class="hero">
-    <h1>Join Revix Studio</h1>
-    <p>Tell us why you’d like to join and what you can bring to the team!</p>
-  </header>
+  <!-- Join Section -->
+  <section>
+    <div class="join-info">
+      <h3>Why Join Revix Studio?</h3>
+      <p>Revix Studio is a creative team building next-gen Roblox games. 
+         We welcome <b>scripters, builders, modelers, animators, UI/UX designers</b>, and 
+         <b>idea creators</b>. Everyone contributes and shares in success. 🚀</p>
+      <p>Fill out the form below and tell us your skills & motivation. 
+         The stronger your application, the higher your chances of joining.</p>
+    </div>
 
-  <!-- Join Form -->
-  <section class="form-section">
-    <form action="https://formspree.io/f/xgvzjapw" method="POST" class="join-form">
-      <label>
-        Your Name
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Email or Discord
-        <input type="text" name="contact" required>
-      </label>
-      <label>
-        Why do you want to join?
-        <textarea name="why_join" rows="4" required></textarea>
-      </label>
-      <label>
-        What skills can you bring?
-        <textarea name="skills" rows="4" required></textarea>
-      </label>
-      <button type="submit">Submit Application</button>
-    </form>
+    <div class="form-section">
+      <form class="join-form" action="https://formspree.io/f/myzpqyda" method="POST">
+        <label>Your Name
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="Enter your email" required>
+        </label>
+        <label>Role You Can Do
+          <select name="role" required>
+            <option value="">Select your role</option>
+            <option>Scripter</option>
+            <option>Builder</option>
+            <option>Modeler</option>
+            <option>Animator</option>
+            <option>UI/UX Designer</option>
+            <option>Idea Creator</option>
+          </select>
+        </label>
+        <label>Why do you want to join?
+          <textarea name="reason" placeholder="Tell us why you want to join..." rows="5" required></textarea>
+        </label>
+        <label>Portfolio / Examples (optional)
+          <input type="url" name="portfolio" placeholder="Link to your work (if any)">
+        </label>
+        <button type="submit">Join Now</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Revix Studio. All Rights Reserved.</p>
+    <p>© 2025 Revix Studio. All rights reserved.</p>
   </footer>
 </body>
 </html>
