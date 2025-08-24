@@ -1,123 +1,132 @@
-/* ===== REVIX Studio Theme (dark, neon, FPS vibe) ===== */
-:root{
-  --bg:#07090f;
-  --bg-2:#0b0f1a;
-  --card:#0f1424;
-  --ink:#e8ecf3;
-  --muted:#b7c2d1;
-  --brand:#60a5fa;   /* sky blue */
-  --brand2:#22d3ee;  /* cyan */
-  --accent:#a78bfa;  /* purple */
-  --line:rgba(255,255,255,.08);
-  --shadow: 0 18px 50px rgba(0,0,0,.45);
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans";
-  background: radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.12), transparent),
-             radial-gradient(800px 400px at 10% -10%, rgba(34,211,238,.10), transparent),
-             var(--bg);
-  color:var(--ink);
-  line-height:1.7;
+body {
+  background: linear-gradient(135deg, #3b0066, #8e2de2, #4a00e0);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+  color: #fff;
+  min-height: 100vh;
 }
 
-/* Layout helpers */
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-.grid{display:grid;gap:24px}
-
-/* Header / Nav */
-header{
-  position:sticky;top:0;z-index:50;
-  background:linear-gradient(180deg, rgba(7,9,15,.85), rgba(7,9,15,.55) 60%, transparent);
-  backdrop-filter: blur(12px);
-  border-bottom:1px solid var(--line);
-}
-.nav{
-  height:80px;display:flex;align-items:center;justify-content:space-between;
-}
-.logo{
-  font-weight:900;letter-spacing:.08em;
-  background: linear-gradient(90deg,var(--brand2),var(--brand),var(--accent));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  font-size:1.35rem;
-}
-.links{display:flex;gap:28px;align-items:center}
-.links a{
-  color:var(--muted);text-decoration:none;font-weight:700;letter-spacing:.02em;
-  transition:color .2s, opacity .2s;
-}
-.links a:hover,.links a.active{color:var(--ink)}
-.menu{display:none;color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:8px 12px;border-radius:10px}
-@media (max-width:850px){ .links{display:none} .menu{display:inline-flex} }
-
-/* Hero */
-.hero{position:relative;overflow:hidden;isolation:isolate;border-bottom:1px solid var(--line)}
-.hero-media{position:absolute;inset:0;z-index:-1;opacity:.45;filter:saturate(1.05) contrast(1.05) brightness(.9)}
-.hero::after{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background: radial-gradient(900px 420px at 85% 0%, rgba(167,139,250,.18), transparent);
-}
-.hero-inner{padding:120px 0 96px}
-.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin:0 0 12px;font-weight:1000;letter-spacing:.02em}
-.hero p{max-width:860px;color:var(--muted);margin:0 0 26px;font-size:clamp(1rem,1.4vw,1.15rem)}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{
-  display:inline-flex;align-items:center;gap:.6rem;
-  padding:13px 20px;border-radius:12px;text-decoration:none;
-  color:#06101e;background:linear-gradient(135deg,var(--brand),var(--brand2));
-  font-weight:900; box-shadow:var(--shadow); transition:.25s transform,.25s filter;
-}
-.btn:hover{transform:translateY(-2px); filter:brightness(1.05)}
-.btn.outline{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
-
-/* Sections */
-.section{padding:84px 0;border-top:1px solid var(--line)}
-.section h2{font-size:clamp(1.8rem,3.6vw,2.4rem);margin:0 0 12px}
-.lead{color:var(--muted);max-width:860px}
-
-/* Cards */
-.card{
-  background:linear-gradient(180deg,var(--card),#0a0f1f);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow); border-radius:18px; overflow:hidden;
-}
-.pad{padding:20px}
-
-/* Images */
-.img-cover{width:100%;height:100%;object-fit:cover;display:block}
-.round{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
-
-/* Galleries & Grids */
-.gallery{grid-template-columns:repeat(12,1fr)}
-.gallery .span-6{grid-column:span 6}
-.gallery .span-4{grid-column:span 4}
-@media (max-width:900px){
-  .gallery{grid-template-columns:repeat(6,1fr)}
-  .gallery .span-6{grid-column:span 6}
-  .gallery .span-4{grid-column:span 6}
+/* Animate gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Forms */
-form{display:grid;gap:12px}
-input, textarea{
-  background:#0c1222;color:var(--ink);
-  border:1px solid var(--line);border-radius:12px;
-  padding:12px 14px;font-size:1rem;outline:none;
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-textarea{min-height:140px;resize:vertical}
 
-/* Footer */
-footer{padding:40px 0;background:linear-gradient(180deg,transparent,#0a0f1f)}
-footer .row{display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:space-between}
-footer a{color:var(--muted);text-decoration:none}
-footer a:hover{color:var(--ink)}
+.navbar img {
+  height: 45px;
+}
 
-/* Reveal animation */
-.reveal{opacity:0;transform:translateY(20px);transition:.6s ease}
-.reveal.show{opacity:1;transform:none}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
-/* Bigger typography for Games & Join pages */
-.big h1{font-size:clamp(2.6rem,6vw,4rem)}
-.big p{font-size:clamp(1.05rem,1.6vw,1.25rem)}
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffccff;
+}
+
+/* Section styling */
+section {
+  padding: 80px 15%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Game Cards */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Form */
+form {
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+form input, form textarea {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+form button {
+  background: #8e2de2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #4a00e0;
+}
