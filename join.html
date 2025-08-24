@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join — REVIX Studio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Revix Studio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Revix Studio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="ideas.html">Ideas</a></li>
+      <li><a href="join.html" class="active">Join</a></li>
+    </ul>
+  </nav>
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <img src="logo.png" alt="REVIX Studio Logo"/><span>REVIX STUDIO</span>
-    </a>
-    <nav class="links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="games.html">Games</a>
-      <a class="active" href="join.html">Join</a>
-      <a href="ideas.html">Ideas</a>
-    </nav>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="hero">
+    <h1>Join Revix Studio</h1>
+    <p>Tell us why you’d like to join and what you can bring to the team!</p>
+  </header>
 
-<section class="hero center">
-  <div class="shape"></div>
-  <div class="container">
-    <h1 class="title">Join REVIX Studio</h1>
-    <p class="lead">We’re hiring scripters, builders/modelers, UI/UX, and animators. Payment via % profit share — grow with us.</p>
-    <div class="actions">
-      <a class="btn" href="https://discord.gg/u9SuHXsr" target="_blank">Apply on Discord</a>
-      <a class="btn-outline" href="games.html">See Our Work</a>
-    </div>
-  </div>
-</section>
+  <!-- Join Form -->
+  <section class="form-section">
+    <form action="https://formspree.io/f/xgvzjapw" method="POST" class="join-form">
+      <label>
+        Your Name
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email or Discord
+        <input type="text" name="contact" required>
+      </label>
+      <label>
+        Why do you want to join?
+        <textarea name="why_join" rows="4" required></textarea>
+      </label>
+      <label>
+        What skills can you bring?
+        <textarea name="skills" rows="4" required></textarea>
+      </label>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
 
-<section class="section">
-  <div class="container head">
-    <h2>What We Value</h2>
-    <p class="lead">Ownership, quality, and player-first thinking.</p>
-  </div>
-  <div class="container grid cols-3">
-    <div class="card"><h3>Ownership</h3><p>Drive features from concept to ship with pride.</p></div>
-    <div class="card"><h3>Quality</h3><p>Readable UI, stable code, playable performance.</p></div>
-    <div class="card"><h3>Players</h3><p>Build what players actually want. Iterate fast.</p></div>
-  </div>
-</section>
-
-<footer>
-  <div class="container row">
-    <div>© 2025 REVIX Studio</div>
-    <div><a href="ideas.html">Suggest an Idea</a></div>
-  </div>
-</footer>
-
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Revix Studio. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
