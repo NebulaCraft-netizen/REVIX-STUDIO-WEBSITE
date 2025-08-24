@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Games — REVIX Studio</title>
-<style>
-body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#000; color:white; }
-header { background:#111; padding:15px 50px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #222; }
-.logo { font-size:26px; font-weight:bold; color:#f33; letter-spacing:1px; }
-nav.links { display:flex; gap:20px; }
-nav.links a { text-decoration:none; color:#ccc; font-weight:500; padding:8px 15px; border-radius:6px; transition:all 0.2s ease; }
-nav.links a:hover { background:#222; color:#f33; }
-nav.links a.active { background:#f33; color:white; }
-.hero { background:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; height:50vh; display:flex; justify-content:center; align-items:center; text-align:center; color:white; text-shadow:2px 2px 10px black; }
-.section { padding:80px 50px; text-align:center; }
-.section h2 { font-size:36px; margin-bottom:20px; }
-.grid { display:grid; gap:20px; }
-.grid.gallery { grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
-.grid.gallery img { width:100%; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.6); transition:transform 0.3s ease; }
-.grid.gallery img:hover { transform:scale(1.05); }
-.card { background:#111; border-radius:12px; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.6); }
-footer { background:#111; padding:20px; text-align:center; font-size:14px; color:#aaa; }
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Games — REVIX Studio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header>
-  <div class="logo">REVIX STUDIO</div>
-  <nav class="links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a class="active" href="games.html">Games</a>
-    <a href="ideas.html">Ideas</a>
-    <a href="join.html">Join</a>
-  </nav>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="REVIX Studio Logo"/><span>REVIX STUDIO</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="games.html">Games</a>
+      <a href="join.html">Join</a>
+      <a href="ideas.html">Ideas</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-  <h2>Our Games</h2>
-</section>
-
-<section class="section">
-  <h2>Featured Games</h2>
-  <div class="grid gallery">
-    <a href="https://www.roblox.com/games/114842101034683/Arena-X" target="_blank">
-      <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg" alt="Arena X">
-    </a>
-    <a href="https://www.roblox.com/games/120365930948473/NEW-Media-Tower" target="_blank">
-      <img src="https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg" alt="Media Tower">
-    </a>
-    <a href="https://www.roblox.com/games/85136359117468/NEW-CART-RIDE-AROUND-NOTHING-2-0" target="_blank">
-      <img src="https://images.pexels.com/photos/12718988/pexels-photo-12718988.jpeg" alt="Cart Ride">
-    </a>
+<section class="hero center">
+  <div class="shape"></div>
+  <div class="container">
+    <h1 class="title">Explore Our Games</h1>
+    <p class="lead">Futuristic showcase — click to play instantly on Roblox.</p>
   </div>
 </section>
 
 <section class="section">
-  <h2>Game Features</h2>
-  <div class="grid" style="grid-template-columns:repeat(3,1fr); gap:20px;">
-    <div class="card"><h3>Competitive Modes</h3><p>Team deathmatch, capture points, and tactical objectives.</p></div>
-    <div class="card"><h3>Progression</h3><p>Unlock cosmetics, ranks, and rewards through gameplay.</p></div>
-    <div class="card"><h3>Multiplayer Fun</h3><p>Play with friends and compete globally.</p></div>
+  <div class="container grid cols-3">
+
+    <!-- Arena X -->
+    <article class="game">
+      <div class="media">
+        <img src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Arena X neon arena">
+        <div class="overlay"></div>
+      </div>
+      <div class="info">
+        <h3 class="title">Arena X</h3>
+        <p class="desc">Competitive FPS with tactical maps and ranked play.</p>
+        <div class="cta">
+          <a class="btn" href="https://www.roblox.com/games/114842101034683/Arena-X" target="_blank">Play Now</a>
+          <a class="btn-outline" href="ideas.html">Suggest Feature</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Media Tower -->
+    <article class="game">
+      <div class="media">
+        <img src="https://images.pexels.com/photos/3137055/pexels-photo-3137055.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Futuristic tower">
+        <div class="overlay"></div>
+      </div>
+      <div class="info">
+        <h3 class="title">Media Tower</h3>
+        <p class="desc">Climb a neon tower with randomized challenges.</p>
+        <div class="cta">
+          <a class="btn" href="https://www.roblox.com/games/120365930948473/NEW-Media-Tower" target="_blank">Play Now</a>
+          <a class="btn-outline" href="ideas.html">Suggest Feature</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cart Ride -->
+    <article class="game">
+      <div class="media">
+        <img src="https://images.pexels.com/photos/788781/pexels-photo-788781.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Futuristic rails">
+        <div class="overlay"></div>
+      </div>
+      <div class="info">
+        <h3 class="title">Cart Ride Around Nothing 2.0</h3>
+        <p class="desc">Speed, sabotage, survive the neon tracks.</p>
+        <div class="cta">
+          <a class="btn" href="https://www.roblox.com/games/85136359117468/NEW-CART-RIDE-AROUND-NOTHING-2-0" target="_blank">Play Now</a>
+          <a class="btn-outline" href="ideas.html">Suggest Feature</a>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
 <footer>
-  <p>© 2025 REVIX Studio. All Rights Reserved.</p>
+  <div class="container row">
+    <div>© 2025 REVIX Studio</div>
+    <div><a href="join.html">Join the Team</a></div>
+  </div>
 </footer>
 
 </body>
