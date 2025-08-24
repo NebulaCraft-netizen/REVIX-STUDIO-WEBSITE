@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About — REVIX Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">REVIX STUDIO</div>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
-        <a href="games.html">Games</a>
-        <a href="ideas.html">Ideas</a>
-        <a href="join.html">Join</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <h1>About REVIX Studio</h1>
-      <p>We build unique Roblox games that combine fun, challenge, and competitive play. Every project we release is fueled by our passion for innovation.</p>
-    </div>
-  </section>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="REVIX Studio Logo"/><span>REVIX STUDIO</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="games.html">Games</a>
+      <a href="join.html">Join</a>
+      <a href="ideas.html">Ideas</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="section">
-    <div class="container grid">
-      <div class="card reveal">
-        <h3>Arena X</h3>
-        <p>A competitive FPS experience with crisp mechanics and fair ranked play.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Media Tower</h3>
-        <p>A unique tower climb experience with randomness and excitement.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Cart Ride</h3>
-        <p>Classic Roblox fun — chaos, teamwork, and unpredictable journeys.</p>
-      </div>
-    </div>
-  </section>
+<section class="hero center">
+  <div class="shape"></div>
+  <div class="container">
+    <h1 class="title">About REVIX Studio</h1>
+    <p class="lead">We’re a small team focused on building stylish, competitive, and fun Roblox games with clear design and community-first updates.</p>
+  </div>
+</section>
 
-  <footer>
-    <div class="container row">
-      <div>© 2025 REVIX Studio</div>
+<section class="section">
+  <div class="container head">
+    <h2>Our Pillars</h2>
+    <p class="lead">Every project shares these core values.</p>
+  </div>
+  <div class="container grid cols-3">
+    <div class="card"><h3>Design Clarity</h3><p>Readable HUD, strong contrast, and smooth effects.</p></div>
+    <div class="card"><h3>Skill Expression</h3><p>Mechanics that reward learning and mastery.</p></div>
+    <div class="card"><h3>Performance</h3><p>Optimized for smooth play across devices.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container head">
+    <h2>Games We’re Building</h2>
+    <p class="lead">Quick snapshot of our active titles.</p>
+  </div>
+  <div class="container grid cols-3">
+    <div class="card">
+      <h3>Arena X</h3>
+      <p>Fast-paced FPS with tactical maps and ranked matchmaking.</p>
+      <p><a class="btn-outline" href="https://www.roblox.com/games/114842101034683/Arena-X" target="_blank">Play on Roblox</a></p>
     </div>
-  </footer>
+    <div class="card">
+      <h3>Media Tower</h3>
+      <p>Chaotic tower climb with randomized challenges each run.</p>
+      <p><a class="btn-outline" href="https://www.roblox.com/games/120365930948473/NEW-Media-Tower" target="_blank">Play on Roblox</a></p>
+    </div>
+    <div class="card">
+      <h3>Cart Ride Around Nothing 2.0</h3>
+      <p>Remixed cart classic — speedrun or sabotage your friends.</p>
+      <p><a class="btn-outline" href="https://www.roblox.com/games/85136359117468/NEW-CART-RIDE-AROUND-NOTHING-2-0" target="_blank">Play on Roblox</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container row">
+    <div>© 2025 REVIX Studio</div>
+    <div><a href="ideas.html">Suggest an Idea</a></div>
+  </div>
+</footer>
+
 </body>
 </html>
