@@ -1,56 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ideas — REVIX Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">REVIX STUDIO</div>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="games.html">Games</a>
-        <a class="active" href="ideas.html">Ideas</a>
-        <a href="join.html">Join</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <h1>Share Your Ideas</h1>
-      <p>Have an idea for one of our games? Tell us and shape the future of REVIX Studio!</p>
-    </div>
-  </section>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="REVIX Studio Logo"/><span>REVIX STUDIO</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="games.html">Games</a>
+      <a href="join.html">Join</a>
+      <a class="active" href="ideas.html">Ideas</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="section">
-    <div class="container">
-      <form action="https://formspree.io/f/xgvzjapw" method="POST" class="idea-form">
-        <label>Game Name</label>
-        <input type="text" name="game" required placeholder="Arena X, Media Tower, etc.">
+<section class="hero center">
+  <div class="shape"></div>
+  <div class="container">
+    <h1 class="title">Share Your Ideas</h1>
+    <p class="lead">Help steer our updates. We read every submission.</p>
+  </div>
+</section>
 
-        <label>Your Idea</label>
-        <textarea name="idea" rows="5" required placeholder="Describe your idea here..."></textarea>
+<section class="section">
+  <div class="container">
+    <form class="revix" action="https://formspree.io/f/xgvzjapw" method="POST">
+      <div class="row">
+        <div>
+          <label for="game">Game</label>
+          <select id="game" name="game" required>
+            <option value="Arena X">Arena X</option>
+            <option value="Media Tower">Media Tower</option>
+            <option value="Cart Ride Around Nothing 2.0">Cart Ride Around Nothing 2.0</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="type">Type</label>
+          <select id="type" name="type" required>
+            <option value="Idea">Idea</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Bug">Bug</option>
+          </select>
+        </div>
+      </div>
 
-        <label>Is it direct or feedback?</label>
-        <select name="type">
-          <option value="Idea">New Idea</option>
-          <option value="Feedback">Feedback</option>
-        </select>
+      <label for="idea">Describe It</label>
+      <textarea id="idea" name="idea" placeholder="Explain clearly what you want to see and why it helps players." required></textarea>
 
-        <button type="submit" class="btn">Submit Idea</button>
-      </form>
-    </div>
-  </section>
+      <div class="row">
+        <div>
+          <label for="name">Name (optional)</label>
+          <input id="name" name="name" placeholder="Your nickname"/>
+        </div>
+        <div>
+          <label for="contact">Contact (optional)</label>
+          <input id="contact" name="contact" placeholder="Discord#1234"/>
+        </div>
+      </div>
 
-  <footer>
-    <div class="container row">
-      <div>© 2025 REVIX Studio</div>
-    </div>
-  </footer>
+      <div class="actions">
+        <button class="btn" type="submit">Submit</button>
+        <a class="btn-outline" href="games.html">Back to Games</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container row">
+    <div>© 2025 REVIX Studio</div>
+    <div><a href="join.html">Join the Team</a></div>
+  </div>
+</footer>
+
 </body>
 </html>
