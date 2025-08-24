@@ -2,24 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Revix Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REVIX Studio — Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <img src="logo.png" alt="Revix Studio Logo">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="ideas.html">Ideas</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
+  <!-- Navbar -->
+  <header>
+    <div class="container nav">
+      <div class="logo">REVIX STUDIO</div>
+      <nav class="links">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="games.html">Games</a>
+        <a href="ideas.html">Ideas</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
+  </header>
 
-  <section>
-    <h1>Welcome to Revix Studio</h1>
-    <p>Building innovative Roblox experiences for players worldwide.</p>
+  <!-- Hero -->
+  <section class="hero big">
+    <div class="hero-inner container">
+      <h1>Welcome to REVIX Studio</h1>
+      <p>Innovating Roblox games with creativity, competitiveness, and community-driven ideas.</p>
+      <a href="games.html" class="btn">See Our Games</a>
+    </div>
   </section>
+
+  <!-- Highlights -->
+  <section class="section">
+    <div class="container grid">
+      <div class="card reveal">
+        <h3>Arena X</h3>
+        <p>Fast-paced FPS action, tactical maps, and ranked play.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Media Tower</h3>
+        <p>A thrilling climb with unpredictable challenges and fun.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Cart Ride</h3>
+        <p>Classic Roblox cart chaos reinvented in a modern way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container row">
+      <div>© 2025 REVIX Studio</div>
+      <div><a href="join.html">Join Us</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(rs=>rs.forEach(r=>r.isIntersecting&&r.target.classList.add('show')),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
 </body>
 </html>
